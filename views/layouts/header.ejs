@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            width: 100%;
+            background-color: #007bff;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .button-group button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #007bff;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button-group button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .button-group {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .button-group button {
+                flex: 1 1 calc(50% - 10px);
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Website</div>
+        <div class="button-group">
+            <button onclick="location.href='/student_details'">Add</button>
+            <button onclick="location.href='/update'">Update</button>
+            <button onclick="location.href='/view'">View</button>
+            <button onclick="location.href='/delete'">Delete</button>
+            <button onclick="location.href='/home'">LogOut</button>
+        </div>
+        
+    </header>
+    <br>
+    <br>
+</body>
+</html>
